@@ -1,0 +1,31 @@
+
+numberofsharespurchased = float(input(f"Please enter your number of shared purchase :"))
+pershareprice = float(input(f"Please enter your per share purchase price:"))
+commission = .03
+
+stockperchasedpershare = numberofsharespurchased * pershareprice
+
+totalcomission1 =stockperchasedpershare * commission
+
+print(f"The amount of money Joe initially paid for the stock per share.  {stockperchasedpershare}")
+
+print(f"this is the comission paid $ {totalcomission1}")
+print(f"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*%%")
+
+numberofsharedsold = float(input(f"Please enter your number of shared sold :"))
+persharesoldprice = float(input(f"Please enter your per share stock sold price:"))
+
+paidforthestock = numberofsharespurchased * persharesoldprice
+totalleftafterpurchased =    paidforthestock - stockperchasedpershare
+
+print(f"The amount of money Joe paid for the 2nd transaction.  {paidforthestock}")
+totalcomission2 =paidforthestock * commission
+bothcomsision =totalcomission1 + totalcomission2
+totalprofit =   totalleftafterpurchased - bothcomsision
+
+print(f"The amount of money Joe paid his broker in both transaction is:  $ {bothcomsision}")
+#print(f"The amount of money Joe paid his broker in both transaction is:   {totalleftafterpurchased}")
+print(f"The amount of money Joe made is:   {totalprofit}")
+#totalprofitafter = paidforthestock - totalcomission2
+if totalprofit > 0:
+    print(f"Joe made a total of $ {totalprofit} and a profit of {totalprofit}")
